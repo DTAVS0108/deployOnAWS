@@ -12,8 +12,8 @@ phases:
       - sudo cp index.html /usr/share/nginx/html
   post_build:
     commands:
-      - echo Configuring NGINX
-      - sudo systemctl start nginx
+      - echo Starting NGINX
+      - sudo nginx -g 'daemon off;'
 artifacts:
   files:
     - "**/*"
